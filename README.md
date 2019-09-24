@@ -1,6 +1,6 @@
 # max-chat-app
 
-> My fantabulous Nuxt.js project
+> Application MaxChatApp
 
 ## Build Setup
 
