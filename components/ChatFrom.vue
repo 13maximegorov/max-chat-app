@@ -1,14 +1,24 @@
 <template>
-    <v-flex xs12>
-        <v-text-field label="Введите сообщение" outline v-model="text" @keydown.enter="send" />
-    </v-flex>
+    <v-text-field
+            v-model="text"
+            :append-outer-icon="sendIcon"
+            filled
+            clear-icon="mdi-close-circle"
+            clearable
+            label="Введите сообщение"
+            type="text"
+            @keydown.enter="send"
+            @click:append-outer="send"
+          ></v-text-field>
 </template>
 
 <script>
+import { mdiSend } from "@mdi/js";
 export default {
     data() {
         return {
-            text: ''
+            text: '',
+            sendIcon: mdiSend
         }
     },
     methods: {
