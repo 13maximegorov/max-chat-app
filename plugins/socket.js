@@ -1,12 +1,11 @@
 import Vue from 'vue'
 import VueSocketIO from 'vue-socket.io'
-const nuxt = new Nuxt(config)
-const { host, port } = nuxt.options.server
+const config = require('../nuxt.config.js')
 
 export default function({store}) {
     Vue.use(new VueSocketIO({
         debug: false,
-        connection: `http://${host}:${port}`,
+        connection: `${config.server.host}:${config.server.port}`,
         vuex: {
             store,
             actionPrefix: 'SOCKET_',
