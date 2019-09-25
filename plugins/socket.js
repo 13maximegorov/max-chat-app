@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueSocketIO from 'vue-socket.io'
-const config = require('../nuxt.config.js')
+const {host, port} = require('../nuxt.config.js').server
 
 export default function({store}) {
     Vue.use(new VueSocketIO({
         debug: false,
-        connection: `${config.server.host}:${config.server.port}`,
+        connection: `https://max-chat-application.herokuapp.com:${port}`,
         vuex: {
             store,
             actionPrefix: 'SOCKET_',
