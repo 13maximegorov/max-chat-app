@@ -1,9 +1,9 @@
 <template>
     <v-app app>
-        <v-content>
+        <v-main>
             <v-container fluid>
                 <h1>Страница не найдена</h1>
             </v-container>
-        </v-content>
+        </v-main>
     </v-app>
 </template>

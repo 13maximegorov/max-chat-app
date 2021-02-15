@@ -22,11 +22,11 @@
       <v-toolbar-title>MaxChatApp (Комната {{user.room}})</v-toolbar-title>
       <v-btn @click="exit" class="mx-5" color="red">Выйти</v-btn>
     </v-app-bar>
-    <v-content>
+    <v-main>
       <div style="height: 100%">
         <nuxt />
       </div>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 

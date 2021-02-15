@@ -53,7 +53,6 @@ io.on('connection', socket => {
             io.to(user.room).emit('updateUsers', users.getByRoom(user.room))
             io.to(user.room).emit('newMessage', m('admin', `Пользователь ${user.name} вышел.`))
         }
-        cb()
     })
 })
 
